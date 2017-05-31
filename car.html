@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>车展旋转/旋转木马</title>
+</head>
+<body>
+<!-- 对图片相对定位 -->
+<style>
+	div{
+		position: relative;
+		width: 350px;
+		height: 260px;
+		margin: 20% auto;
+		/*应用动画*/
+		animation: roll 10s linear infinite;
+	}
+	/*对图片绝对定位*/
+	div>img{
+		position: absolute;
+		width: 350px;
+		height: 260px;
+	}
+	body{
+		perspective:4000px;
+	}
+	div{
+		transform-style: preserve-3d;
+	}
+	img:nth-child(1){
+		transform: rotateY(30deg) translateZ(700px);
+	}
+	img:nth-child(2){
+		transform: rotateY(60deg) translateZ(700px);
+	}
+	img:nth-child(3){
+		transform: rotateY(90deg) translateZ(700px);
+	}
+	img:nth-child(4){
+		transform: rotateY(120deg) translateZ(700px);
+	}
+	img:nth-child(5){
+		transform: rotateY(150deg) translateZ(700px);
+	}
+	img:nth-child(6){
+		transform: rotateY(180deg) translateZ(700px);
+	}
+	img:nth-child(7){
+		transform: rotateY(210deg) translateZ(700px);
+	}
+	img:nth-child(8){
+		transform: rotateY(240deg) translateZ(700px);
+	}
+	img:nth-child(9){
+		transform: rotateY(270deg) translateZ(700px);
+	}
+	img:nth-child(10){
+		transform: rotateY(300deg) translateZ(700px);
+	}
+	img:nth-child(11){
+		transform: rotateY(330deg) translateZ(700px);
+	}
+	img:nth-child(12){
+		transform: rotateY(360deg) translateZ(700px);
+	}
+/*定义动画*/
+	@keyframes roll{
+		0%{
+			-webkit-transform: rotateY(0deg);
+			-ms-transform: rotateY(0deg);
+			-o-transform: rotateY(0deg);
+			transform: rotateY(0deg);
+		}
+		100%{
+			-webkit-transform: rotateY(360deg);
+			-ms-transform: rotateY(360deg);
+			-o-transform: rotateY(360deg);
+			transform: rotateY(360deg);
+		}
+	}
+</style>
+	<div>
+		<img src="images/test1.jpg"  >
+		<img src="images/test2.jpg"  >
+		<img src="images/test3.jpg"  >
+		<img src="images/test4.jpg"  >
+		<img src="images/test5.jpg"  >
+		<img src="images/test6.jpg"  >
+		<img src="images/test7.jpg"  >
+		<img src="images/test8.jpg"  >
+		<img src="images/test9.jpg"  >
+		<img src="images/test10.jpg"  >
+		<img src="images/test11.jpg"  >
+		<img src="images/test12.jpg"  >
+	</div>
+</body>
+</html>
